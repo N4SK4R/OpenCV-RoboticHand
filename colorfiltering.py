@@ -10,12 +10,19 @@ cap = cv2.VideoCapture(0)
 cv2.namedWindow('Trackbars') 
 cv2.resizeWindow('Trackbars', 640, 240)
 
-cv2.createTrackbar('H minimum', 'Trackbars', 0, 179, empty) #red
-cv2.createTrackbar('H maximum', 'Trackbars', 18, 179, empty)
-cv2.createTrackbar('S minimum', 'Trackbars', 124, 255, empty)
+# cv2.createTrackbar('H minimum', 'Trackbars', 0, 179, empty) 
+# cv2.createTrackbar('H maximum', 'Trackbars', 179, 179, empty)
+# cv2.createTrackbar('S minimum', 'Trackbars', 0, 255, empty)
+# cv2.createTrackbar('S maximum', 'Trackbars', 225, 255, empty)
+# cv2.createTrackbar('V minimum', 'Trackbars', 0, 255, empty)
+# cv2.createTrackbar('V maximum', 'Trackbars', 255, 255, empty)
+
+cv2.createTrackbar('H minimum', 'Trackbars', 144, 179, empty)#red
+cv2.createTrackbar('H maximum', 'Trackbars', 179, 179, empty)
+cv2.createTrackbar('S minimum', 'Trackbars', 100, 255, empty)
 cv2.createTrackbar('S maximum', 'Trackbars', 225, 255, empty)
-cv2.createTrackbar('V minimum', 'Trackbars', 117, 255, empty)
-cv2.createTrackbar('V maximum', 'Trackbars', 201, 255, empty)
+cv2.createTrackbar('V minimum', 'Trackbars', 99, 255, empty)
+cv2.createTrackbar('V maximum', 'Trackbars', 255, 255, empty)
 
 while True:
     _, frame = cap.read()
@@ -27,8 +34,8 @@ while True:
     vMin = cv2.getTrackbarPos('V minimum', 'Trackbars')
     vMax = cv2.getTrackbarPos('V maximum', 'Trackbars')
 
-    lower = np.array([hMin, sMin, vMin])
-    upper = np.array([hMax, sMax, vMax]) 
+    lower = np.array([hMin,sMin,vMin])
+    upper = np.array([hMax,sMax,vMax]) 
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     hsv = cv2.GaussianBlur(hsv, (9,9), 0)
