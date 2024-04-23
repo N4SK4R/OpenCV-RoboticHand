@@ -6,9 +6,10 @@ This project integrates OpenCV, Pyserial, and MediaPipe to create a robotic hand
 
 # Interpolating Distance from landmarks for each finger with respect to servo angle constrained from 0 to 90
 
-https://github.com/N4SK4R/OpenCV-RoboticHand/assets/115721424/76e8d4ca-b144-427c-bce7-efafe335d525
+https://github.com/N4SK4R/OpenCV-RoboticHand/assets/115721424/0b3ea5b8-0d5b-4d05-9401-9521e0e2825b
+
 
 # Demo Video
 
-https://github.com/N4SK4R/OpenCV-RoboticHand/assets/115721424/40fb7390-9217-418e-9297-eb00731f3b5c
+https://github.com/N4SK4R/OpenCV-RoboticHand/assets/115721424/4047f56d-0345-49e5-bf6c-c0dd90d29ef9
 
